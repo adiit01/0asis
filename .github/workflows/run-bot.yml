@@ -3,9 +3,7 @@ name: Run Oasis Bot Automatically
 on:
   push:
     branches:
-      - main
-  schedule:
-    - cron: '0 0 * * *' # Jalankan setiap hari pada pukul 00:00 UTC
+      - main  # Workflow akan dijalankan setiap kali ada perubahan di branch 'main'
 
 jobs:
   run-bot:
@@ -23,6 +21,9 @@ jobs:
     - name: Install Dependencies
       run: npm install
 
-    - name: Run Main Script
-      run: node main.js
+    - name: Run Setup
+      run: npm run setup
+
+    - name: Run Bot
+      run: npm run start
 
