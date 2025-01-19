@@ -66,8 +66,3 @@ so if you want create multiple providers you need to put multiple proxy there.
    npm run start
    ```
 
-7. Additional feature auto refferal
-   ```bash
-   npm run autoreff
-   ```# 0asis
-# 0asis
